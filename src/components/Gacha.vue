@@ -71,7 +71,7 @@ export default {
       return Array.from(randomDateSet)
     },
     goToPixiv(item) {
-      let pixivUrl = `https://www.pixiv.cool/artworks/${item.id}`
+      let pixivUrl = `https://www.pixiv.net/artworks/${item.id}`
       window.open(pixivUrl)
     }
   }
