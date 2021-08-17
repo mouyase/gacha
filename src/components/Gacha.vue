@@ -18,16 +18,16 @@ export default {
     }
   },
   mounted() {
-    this.$http.get("https://www.pixiv.cool/ajax/illust/91490130").then(response => {
-      console.log(response.data)
-    })
+    // this.$http.get("https://www.pixiv.cool/ajax/illust/91490130").then(response => {
+    //   console.log(response.data)
+    // })
   },
   methods: {
     gacha() {
       this.gachaDataArray = []
       let dateArray = this.getRandomDateArray()
       dateArray.forEach(item => {
-        this.$http.get("https://www.pixiv.cool/ranking.php?format=json&mode=daily&p=1&date=" + item).then(response => {
+        this.$http.get("https://api.pixiv.cool/ranking.php?format=json&mode=daily&p=1&date=" + item).then(response => {
           if (response) {
             if (response.data) {
               if (response.data.contents) {
